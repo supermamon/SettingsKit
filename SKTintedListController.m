@@ -186,7 +186,13 @@
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 17, header.frame.size.width, header.frame.size.height - 10)];
         label.text = LCL(self.headerText);
-        label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:48];
+
+        if ([self respondsToSelector:@selector(headerFont)]) {
+            label.font = self.headerFont;
+        } else {
+            label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:48];
+        }
+        
         label.backgroundColor = [UIColor clearColor];
         if ([self respondsToSelector:@selector(tintColor)])
             label.textColor = self.tintColor;
@@ -205,6 +211,13 @@
             UILabel *subText = [[UILabel alloc] initWithFrame:CGRectMake(header.frame.origin.x, label.frame.origin.y + label.frame.size.height, header.frame.size.width, 20)];
             subText.text = LCL(self.headerSubText);
             subText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
+            
+            if ([self respondsToSelector:@selector(headerSubtextFont)]) {
+                subText.font = self.headerSubtextFont;
+            } else {
+                subText.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:16];    
+            }   
+            
             subText.backgroundColor = [UIColor clearColor];
             if ([self respondsToSelector:@selector(tintColor)])
                 subText.textColor = self.tintColor;

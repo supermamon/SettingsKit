@@ -25,4 +25,6 @@
 -(NSString*) headerSubText;
 -(UIView*) headerView;
 -(UIColor*) headerColor;
+-(UIFont*) headerFont;
+-(UIFont*) headerSubtextFont;
 @end

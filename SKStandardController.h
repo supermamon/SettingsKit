@@ -24,4 +24,9 @@
 -(NSString*) footerText;
 
 -(UIColor*) iconColor;
+-(BOOL) hasCellIcons;
+-(NSString *) enableLabelText;
+-(NSString *) optionsLabelText;
+-(NSString *) makersLabelText;
+-(NSString *) supportLabelText;
 @end
