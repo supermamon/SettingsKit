@@ -1,7 +1,7 @@
 #GO_EASY_ON_ME =1
 DEBUG = 0
 ARCHS = armv7 armv7s arm64
-TARGET = iphone:clang:9.2:8.1
+TARGET = iphone:clang:latest:7.1
 CFLAGS = -fobjc-arc
 #THEOS_PACKAGE_DIR_NAME = debs
 
