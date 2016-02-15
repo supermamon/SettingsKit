@@ -1,13 +1,13 @@
 #!/bin/sh
 
 mkdir -v -p $THEOS/frameworks
-#cp -r .theos/obj/SettingsKit.framework $THEOS/frameworks
-cp -v -f -r ./obj/SettingsKit.framework $THEOS/frameworks
+cp -r .theos/obj/SettingsKit.framework $THEOS/frameworks
+#cp -v -f -r ./obj/SettingsKit.framework $THEOS/frameworks
 
 mkdir -v -p $THEOS/include/SettingsKit/
 mkdir -v -p $THEOS/include/SettingsKit/Resources
 mkdir -v -p $THEOS/include/SettingsKit/Preferences
-cp -v -f Preferences/* $THEOS/include/SettingsKit/Preferences
 cp -v -f *.h $THEOS/include/SettingsKit/
 cp -v -f *.m $THEOS/include/SettingsKit/
 cp -v -f Resources/* $THEOS/include/SettingsKit/Resources/
+cp -v -f Preferences/* $THEOS/include/SettingsKit/Preferences

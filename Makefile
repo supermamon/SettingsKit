@@ -1,8 +1,9 @@
-GO_EASY_ON_ME =1
+#GO_EASY_ON_ME =1
+DEBUG = 0
 ARCHS = armv7 armv7s arm64
-TARGET = iphone:clang:8.1:7.1
+TARGET = iphone:clang:9.2:8.1
 CFLAGS = -fobjc-arc
-THEOS_PACKAGE_DIR_NAME = debs
+#THEOS_PACKAGE_DIR_NAME = debs
 
 include $(THEOS)/makefiles/common.mk
 
@@ -15,7 +16,7 @@ SettingsKit_FILES = SKTintedControlCell.m \
 		    SKSpecifierParser.m \
 		    SKPersonCell.m \
 		    SKStandardController.m \
-            SKListItemsController.m
+        SKListItemsController.m
 
 SettingsKit_PRIVATE_FRAMEWORKS = Preferences
 SettingsKit_INSTALL_PATH = /Library/Frameworks

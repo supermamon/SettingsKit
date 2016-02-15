@@ -41,7 +41,7 @@
         return PSButtonCell;
     if ([str isEqual:@"PSEditTextViewCell"])
         return PSEditTextViewCell;
-    
+
     return PSGroupCell;
 }
 
@@ -61,10 +61,10 @@
             }
             else
                 spec = [PSSpecifier emptyGroupSpecifier];
-            
+
             if (dict[@"footerText"] != nil)
                 [spec setProperty:dict[@"footerText"] forKey:@"footerText"];
-            
+
             [spec setProperty:@"PSGroupCell" forKey:@"cell"];
         }
         else
@@ -79,12 +79,12 @@
             SEL action = dict[@"action"] == nil ? nil : NSSelectorFromString(dict[@"action"]);
             spec = [PSSpecifier preferenceSpecifierNamed:label target:target set:set get:get detail:detail cell:cellType edit:edit];
             spec->action = action;
-            
+
             NSArray *validTitles = dict[@"validTitles"];
             NSArray *validValues = dict[@"validValues"];
             if (validTitles && validValues)
                 [spec setValues:validValues titles:validTitles];
-            
+
             for (NSString *key in dict)
             {
                 if ([key isEqual:@"cellClass"])
@@ -98,8 +98,8 @@
                     [spec setProperty:dict[key] forKey:key];
             }
         }
-        
-        
+
+
         if (dict[@"icon"])
         {
             /*id value = dict[@"icon"];
@@ -116,7 +116,7 @@
             if ([target respondsToSelector:@selector(iconColor)])
                 image = [image changeImageColor:target.iconColor];
             else if ([target respondsToSelector:@selector(tintColor)])
-                image = [image changeImageColor:target.tintColor]; 
+                image = [image changeImageColor:target.tintColor];
 
             [spec setProperty:image forKey:@"iconImage"];*/
 
@@ -125,12 +125,12 @@
                 image = [UIImage imageNamed:dict[@"icon"] inBundle:[NSBundle bundleForClass:target.class]];
             if (image == nil)
                 image = [UIImage imageNamed:dict[@"icon"] inBundle:[NSBundle bundleForClass:self.class]];
-            
+
             if ([target respondsToSelector:@selector(iconColor)])
                 image = [image changeImageColor:target.iconColor];
             else if ([target respondsToSelector:@selector(tintColor)])
                 image = [image changeImageColor:target.tintColor];
-            
+
             [spec setProperty:image forKey:@"iconImage"];
         }
         if (dict[@"leftImage"])
@@ -138,7 +138,7 @@
             UIImage *image = [UIImage imageNamed:dict[@"leftImage"] inBundle:[NSBundle bundleForClass:target.class]];
             if (image == nil)
                 image = [UIImage imageNamed:dict[@"leftImage"] inBundle:[NSBundle bundleForClass:self.class]];
-            
+
             [spec setProperty:image forKey:@"leftImage"];
         }
         if (dict[@"rightImage"])
@@ -146,16 +146,16 @@
             UIImage *image = [UIImage imageNamed:dict[@"rightImage"] inBundle:[NSBundle bundleForClass:target.class]];
             if (image == nil)
                 image = [UIImage imageNamed:dict[@"rightImage"] inBundle:[NSBundle bundleForClass:self.class]];
-            
+
             [spec setProperty:image forKey:@"rightImage"];
         }
-        
+
         if (dict[@"id"])
             [spec setProperty:dict[@"id"] forKey:@"id"];
         else
             [spec setProperty:dict[@"label"] forKey:@"id"];
         spec.target = target;
-        
+
         [specifiers addObject:spec];
     }
     return specifiers;
