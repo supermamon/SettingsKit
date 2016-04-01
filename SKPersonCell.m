@@ -9,9 +9,9 @@
         _background = [[UIImageView alloc] initWithImage:bkIm];
         _background.frame = CGRectMake(9, 18, 65, 65);
         [self addSubview:_background];
-        
+
         CGRect frame = [self frame];
-        
+
         label = [[UILabel alloc] initWithFrame:CGRectMake(frame.origin.x + 84, frame.origin.y + 18, frame.size.width, frame.size.height)];
         [label setText:SK_LCL(self.name)];
         [label setBackgroundColor:[UIColor clearColor]];
@@ -21,7 +21,7 @@
             [label setFont:[UIFont fontWithName:@"HelveticaNeue" size:21]];
         //[label setTextColor:[UIColor colorWithRed:73/255.0f green:73/255.0f blue:73/255.0f alpha:1.0f]];
         [self addSubview:label];
-        
+
         label2 = [[UILabel alloc] initWithFrame:CGRectMake(frame.origin.x + 84, frame.origin.y + 42, frame.size.width, frame.size.height)];
         [label2 setText:SK_LCL(self.personDescription)];
         [label2 setBackgroundColor:[UIColor clearColor]];

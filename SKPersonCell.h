@@ -12,7 +12,6 @@
 -(NSString*)imageName;
 -(NSString*)name;
 -(NSString*)twitterHandle;
-
 -(void)updateImage;
 -(NSString*)localizedString:(NSString*)string;
 @end

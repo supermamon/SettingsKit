@@ -1,5 +1,5 @@
 ARCHS = armv7 armv7s arm64
-TARGET = iPhone:clang:latest:@@DEPLOYMENT_TARGET@@
+TARGET = iphone:clang:latest:@@DEPLOYMENT_TARGET@@
 CFLAGS = -fobjc-arc
 LDFLAGS = -F$(THEOS)/frameworks
 

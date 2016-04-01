@@ -28,19 +28,19 @@
 -(NSArray*) customSpecifiers
 {
     return @[
-             @{
-                 @"cell": @"PSGroupCell",
-                 @"label": @"@@PROJECTNAME@@ Settings"
-                 },
-             @{
-                 @"cell": @"PSSwitchCell",
-                 @"default": @YES,
-                 @"defaults": @"@@PACKAGENAME@@",
-                 @"key": @"enabled",
-                 @"label": @"Enabled",
-                 @"PostNotification": @"@@PROJECTNAME@@/reloadSettings",
-                 @"cellClass": @"SKTintedSwitchCell"
-                 }
-             ];
+            @{
+                @"cell": @"PSGroupCell",
+                @"label": @"@@PROJECTNAME@@ Settings"
+            },
+            @{
+                @"defaults": @"@@PACKAGENAME@@",
+                @"PostNotification": @"@@PACKAGENAME@@/reloadSettings",
+                @"cell": @"PSSwitchCell",
+                @"cellClass": @"SKTintedSwitchCell"
+                @"key": @"enabled",
+                @"default": @YES,
+                @"label": @"Enabled",
+            }
+    ];
 }
 @end
