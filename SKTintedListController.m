@@ -97,7 +97,10 @@
         if ([self respondsToSelector:@selector(switchOnTintColor)])
         {
             if (SK_SYSTEM_VERSION_LESS_THAN(@"9.0"))
+                #pragma clang diagnostic push
+                #pragma clang diagnostic ignored "-Wdeprecated-declarations"
                 [UISwitch appearanceWhenContainedIn:self.class,nil].onTintColor = self.switchOnTintColor;
+                #pragma clang diagnostic pop
             else
                 [UISwitch appearanceWhenContainedInInstancesOfClasses:@[self.class]].onTintColor = self.switchOnTintColor;
         }
@@ -106,7 +109,10 @@
             if ([self respondsToSelector:@selector(tintColor)])
             {
                 if (SK_SYSTEM_VERSION_LESS_THAN(@"9.0"))
+                    #pragma clang diagnostic push
+                    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
                     [UISwitch appearanceWhenContainedIn:self.class,nil].onTintColor = self.tintColor;
+                    #pragma clang diagnostic pop
                 else
                     [UISwitch appearanceWhenContainedInInstancesOfClasses:@[self.class]].onTintColor = self.tintColor;
             }
@@ -115,7 +121,10 @@
         if ([self respondsToSelector:@selector(switchTintColor)])
         {
                 if (SK_SYSTEM_VERSION_LESS_THAN(@"9.0"))
+                    #pragma clang diagnostic push
+                    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
                     [UISwitch appearanceWhenContainedIn:self.class,nil].onTintColor = self.switchTintColor;
+                    #pragma clang diagnostic pop
                 else
                     [UISwitch appearanceWhenContainedInInstancesOfClasses:@[self.class]].onTintColor = self.switchTintColor;
         }
@@ -123,7 +132,10 @@
             if ([self respondsToSelector:@selector(tintColor)])
             {
                 if (SK_SYSTEM_VERSION_LESS_THAN(@"9.0"))
+                    #pragma clang diagnostic push
+                    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
                     [UISwitch appearanceWhenContainedIn:self.class,nil].onTintColor = self.tintColor;
+                    #pragma clang diagnostic pop
                 else
                     [UISwitch appearanceWhenContainedInInstancesOfClasses:@[self.class]].onTintColor = self.tintColor;
             }
