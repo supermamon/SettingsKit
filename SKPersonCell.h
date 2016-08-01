@@ -1,4 +1,5 @@
-#import <Preferences/Preferences.h>
+//#import "Preferences/Preferences.h"
+#import <Preferences/PSTableCell.h>
 #import "common.h"
 
 @interface SKPersonCell : PSTableCell {

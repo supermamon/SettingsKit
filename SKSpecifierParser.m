@@ -1,4 +1,7 @@
-#import <Preferences/Preferences.h>
+#import <Preferences/PSSpecifier.h>
+#import <Preferences/PSTableCell.h>
+#import <Preferences/PSListController.h>
+
 #import "SKSpecifierParser.h"
 #import <objc/runtime.h>
 #import "common.h"

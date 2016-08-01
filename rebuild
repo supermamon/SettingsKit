@@ -1,5 +1,0 @@
-#!/bin/sh
-
-rm -rf _
-rm -rf obj
-make $*

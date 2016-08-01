@@ -1,4 +1,4 @@
-#import <Preferences/Preferences.h>
+#import <Preferences/PSTableCell.h>
 
 @interface SKTintedCell : PSTableCell
 @end
