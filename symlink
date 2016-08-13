@@ -1,0 +1,7 @@
+#!/bin/sh
+
+rm -f $THEOS/vendor/lib/SettingsKit.framework
+rm -f $THEOS/vendor/include/SettingsKit
+
+ln -s $PWD/.theos/obj/SettingsKit.framework $THEOS/vendor/lib/SettingsKit.framework
+ln -s $PWD/ $THEOS/vendor/include/SettingsKit
